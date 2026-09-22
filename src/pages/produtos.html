@@ -1,12 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vinharia Agnello | Produtos</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    
+
+    <header>
+        <div class="cabecalho">
+            <h1>Vinharia Agnello</h1>
+
+            <p>Tradição, conhecimento e bons vinhos.</p>
+        </div>
+
+        <nav aria-label="Navegação principal">
+            <ul class="menu">
+                <li>
+                    <a href="../../index.html">Início</a>
+                </li>
+
+                <li>
+                    <a href="./historia.html">Nossa história</a>
+                </li>
+
+                <li>
+                    <a href="./produtos.html">Produtos</a>
+                </li>
+
+                <li>
+                    <a href="./harmonizacao.html">Harmonização</a>
+                </li>
+
+                <li>
+                    <a href="./contato.html">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Apresentação dos produtos -->
+        <section id="apresentacao-produtos">
+            <div class="conteudo-produtos">
+                <h2>Nossa seleção de vinhos</h2>
+
+                <p>
+                    A Vinharia Agnello oferece rótulos nacionais e
+                    internacionais selecionados para diferentes paladares,
+                    refeições e ocasiões.
+                </p>
+
+                <p>
+                    Nossa equipe está preparada para ajudar clientes iniciantes
+                    e conhecedores a encontrar uma opção adequada.
+                </p>
+            </div>
+
+            <img
+                src="../assets/imgs/produtos.jpg"
+                alt="Seleção de diferentes garrafas e taças de vinho"
+            >
+        </section>
+
+        <!-- Categorias de vinhos -->
+        <section id="categorias">
+            <h2>Categorias disponíveis</h2>
+
+            <div class="lista-categorias">
+                <article class="categoria">
+                    <h3>Vinhos tintos</h3>
+
+                    <p>
+                        Opções encorpadas ou leves, indicadas para carnes,
+                        massas, queijos e diferentes ocasiões.
+                    </p>
+                </article>
+
+                <article class="categoria">
+                    <h3>Vinhos brancos</h3>
+
+                    <p>
+                        Vinhos leves e refrescantes, que podem acompanhar
+                        peixes, frutos do mar, aves e pratos suaves.
+                    </p>
+                </article>
+
+                <article class="categoria">
+                    <h3>Vinhos rosés</h3>
+
+                    <p>
+                        Opções frescas e versáteis para aperitivos, saladas,
+                        pratos leves e momentos descontraídos.
+                    </p>
+                </article>
+
+                <article class="categoria">
+                    <h3>Espumantes</h3>
+
+                    <p>
+                        Bebidas indicadas para celebrações, entradas,
+                        sobremesas e ocasiões especiais.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tabela obrigatória do projeto -->
+        <section id="catalogo">
+            <h2>Catálogo de produtos</h2>
+
+            <p>
+                Conheça alguns exemplos de produtos disponíveis em nossa
+                seleção.
+            </p>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <caption>
+                        Seleção de vinhos da Vinharia Agnello
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Vinho</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Uva</th>
+                            <th scope="col">Origem</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Reserva Andina</td>
+                            <td>Tinto seco</td>
+                            <td>Cabernet Sauvignon</td>
+                            <td>Chile</td>
+                            <td>R$ 89,90</td>
+                        </tr>
+
+                        <tr>
+                            <td>Vale Dourado</td>
+                            <td>Tinto seco</td>
+                            <td>Merlot</td>
+                            <td>Brasil</td>
+                            <td>R$ 79,90</td>
+                        </tr>
+
+                        <tr>
+                            <td>Brisa de Mendoza</td>
+                            <td>Branco seco</td>
+                            <td>Chardonnay</td>
+                            <td>Argentina</td>
+                            <td>R$ 74,90</td>
+                        </tr>
+
+                        <tr>
+                            <td>Jardim de Provence</td>
+                            <td>Rosé seco</td>
+                            <td>Grenache</td>
+                            <td>França</td>
+                            <td>R$ 109,90</td>
+                        </tr>
+
+                        <tr>
+                            <td>Serra Imperial</td>
+                            <td>Espumante brut</td>
+                            <td>Chardonnay e Pinot Noir</td>
+                            <td>Brasil</td>
+                            <td>R$ 69,90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="observacao">
+                Os produtos e preços apresentados são fictícios e foram
+                criados exclusivamente para este projeto acadêmico.
+            </p>
+        </section>
+
+        <!-- Orientação personalizada -->
+        <section id="ajuda-escolha">
+            <h2>Precisa de ajuda para escolher?</h2>
+
+            <p>
+                Conte para nossa equipe qual será a ocasião, qual prato será
+                servido e quais sabores você prefere. Assim, poderemos indicar
+                uma opção adequada ao seu perfil.
+            </p>
+
+            <div class="acoes">
+                <a
+                    class="botao"
+                    href="./harmonizacao.html"
+                >
+                    Consultar harmonizações
+                </a>
+
+                <a
+                    class="botao"
+                    href="./contato.html"
+                >
+                    Solicitar orientação
+                </a>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
