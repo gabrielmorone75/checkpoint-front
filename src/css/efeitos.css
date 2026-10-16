@@ -1,0 +1,220 @@
+/* Seleção de texto personalizada */
+::selection {
+    background-color: #5a1425;
+    color: #ffffff;
+}
+
+
+
+.menu a {
+    position: relative;
+    transition:
+        background-color 250ms ease,
+        color 250ms ease;
+}
+
+/* Linha decorativa abaixo dos links */
+.menu a::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    bottom: 8px;
+    left: 15px;
+    height: 2px;
+    background-color: #ead8b1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 250ms ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background-color: #7a263b;
+    color: #ead8b1;
+}
+
+.menu a:hover::after,
+.menu a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+/* Foco visível para navegação com a tecla Tab */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #a77b32;
+    outline-offset: 4px;
+}
+
+.menu a:focus-visible {
+    outline-color: #ead8b1;
+    outline-offset: -4px;
+}
+
+
+main h2 {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+main h2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 56px;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg,
+            #5a1425,
+            #a77b32);
+}
+
+
+
+main a:not(.botao) {
+    color: #5a1425;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition:
+        color 250ms ease,
+        text-decoration-color 250ms ease;
+}
+
+main a:not(.botao):hover,
+main a:not(.botao):focus-visible {
+    color: #7a263b;
+    text-decoration-color: #a77b32;
+}
+
+
+
+.botao,
+button {
+    transition:
+        background-color 250ms ease,
+        box-shadow 250ms ease,
+        transform 250ms ease;
+}
+
+.botao:hover,
+.botao:focus-visible,
+button:hover,
+button:focus-visible {
+    background-color: #7a263b;
+    box-shadow: 0 6px 14px rgb(90 20 37 / 20%);
+    transform: translateY(-3px);
+}
+
+.botao:active,
+button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+}
+
+/* Espaçamento entre botões já existentes */
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+.categoria,
+.harmonizacao,
+.ocasiao {
+    border-radius: 8px;
+    transition:
+        transform 250ms ease,
+        box-shadow 250ms ease,
+        border-color 250ms ease;
+}
+
+/* Efeitos de mouse apenas em dispositivos compatíveis */
+@media (hover: hover) and (pointer: fine) {
+
+    .categoria:hover,
+    .harmonizacao:hover,
+    .ocasiao:hover {
+        border-left-color: #5a1425;
+        box-shadow: 0 8px 18px rgb(48 41 37 / 12%);
+        transform: translateY(-4px);
+    }
+
+    section img:hover {
+        transform: scale(1.015);
+        box-shadow: 0 8px 20px rgb(48 41 37 / 16%);
+    }
+}
+
+
+
+section img {
+    transition:
+        transform 350ms ease,
+        box-shadow 350ms ease;
+}
+
+
+
+tbody tr:nth-child(even) {
+    background-color: #f7f2eb;
+}
+
+tbody tr {
+    transition: background-color 250ms ease;
+}
+
+tbody tr:hover {
+    background-color: #ead8b1;
+}
+
+
+@keyframes entrada-suave {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Anima somente a apresentação de cada página */
+main>section:first-child {
+    animation: entrada-suave 650ms ease-out;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    main>section:first-child {
+        animation: none;
+    }
+
+    .menu a,
+    .menu a::after,
+    main a:not(.botao),
+    .botao,
+    button,
+    .categoria,
+    .harmonizacao,
+    .ocasiao,
+    section img,
+    tbody tr {
+        transition: none;
+    }
+
+    .botao:hover,
+    .botao:focus-visible,
+    .botao:active,
+    button:hover,
+    button:focus-visible,
+    button:active,
+    .categoria:hover,
+    .harmonizacao:hover,
+    .ocasiao:hover,
+    section img:hover {
+        transform: none;
+    }
+}
